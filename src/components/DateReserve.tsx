@@ -14,7 +14,7 @@ export default function LocationDateReserve({ showLocation = true }: { showLocat
                 <DatePicker className="bg-white"/>
             </LocalizationProvider>
             { showLocation && (
-                <Select variant="standard" name="location" id="location" className="h-[2em] w-[200px]"
+                <Select variant="standard" name="location" id="location" className="h-[2em] w-50"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}>
                     <MenuItem value="BKK">Bangkok</MenuItem>
