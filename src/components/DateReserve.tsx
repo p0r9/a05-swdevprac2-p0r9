@@ -10,9 +10,11 @@ export default function LocationDateReserve({ showLocation = true }: { showLocat
     return (
         <div className="bg-slate-100 rounded-lg gap-x-5 gap-y-2 
         w-fit px-10 py-5 flex flex-row justify-center">
+
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker className="bg-white"/>
             </LocalizationProvider>
+
             { showLocation && (
                 <Select variant="standard" name="location" id="location" className="h-[2em] w-50"
                 value={location}
@@ -22,6 +24,7 @@ export default function LocationDateReserve({ showLocation = true }: { showLocat
                     <MenuItem value="HKT">Phuket</MenuItem>
                 </Select>
             )}
+            
         </div>
     )
 }

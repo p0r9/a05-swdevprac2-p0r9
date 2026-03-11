@@ -9,13 +9,13 @@ div.card {
   flex-direction: column;
 }
 
-div.cardimg{
+div.cardimg {
   flex: 7;
   position: relative;
   overflow: hidden;
 }
 
-div.cardtext{
+div.cardtext {
   flex: 3;
   padding: 10px;
   color: black;

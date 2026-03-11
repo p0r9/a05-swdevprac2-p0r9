@@ -1,4 +1,4 @@
-.menucontainer{
+.menucontainer {
     height: 50px;
     background-color: white;
     position: fixed;
@@ -14,12 +14,12 @@
     align-items: center;
 }
 
-.logoimg{
+.logoimg {
     height: 100%;
     width: auto;
 }
 
-.itemcontainer{
+.itemcontainer {
     width: 120px;
     text-align: center;
     margin-top: auto;
