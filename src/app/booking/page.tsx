@@ -3,21 +3,21 @@ import { useState } from "react"
 import { TextField, Select, MenuItem, FormControl, InputLabel } from "@mui/material"
 import LocationDateReserve from "@/components/DateReserve"
 
-const whiteFieldSx = {
-  "& .MuiInputBase-input": { color: "white" },
-  "& .MuiInput-underline:before": { borderBottomColor: "white" },
-  "& .MuiInput-underline:hover:before": { borderBottomColor: "white" },
-  "& .MuiInput-underline:after": { borderBottomColor: "white" },
-  "& .MuiInputLabel-root": { color: "white" },
-  "& .MuiInputLabel-root.Mui-focused": { color: "white" },
+const darkFieldSx = {
+  "& .MuiInputBase-input": { color: "#171717" },
+  "& .MuiInput-underline:before": { borderBottomColor: "#171717" },
+  "& .MuiInput-underline:hover:before": { borderBottomColor: "#171717" },
+  "& .MuiInput-underline:after": { borderBottomColor: "#0284c7" },
+  "& .MuiInputLabel-root": { color: "#555555" },
+  "& .MuiInputLabel-root.Mui-focused": { color: "#0284c7" },
 }
 
-const whiteSelectSx = {
-  color: "white",
-  "&:before": { borderBottomColor: "white" },
-  "&:hover:before": { borderBottomColor: "white" },
-  "&:after": { borderBottomColor: "white" },
-  "& .MuiSvgIcon-root": { color: "white" },
+const darkSelectSx = {
+  color: "#171717",
+  "&:before": { borderBottomColor: "#171717" },
+  "&:hover:before": { borderBottomColor: "#171717" },
+  "&:after": { borderBottomColor: "#0284c7" },
+  "& .MuiSvgIcon-root": { color: "#171717" },
 }
 
 export default function Booking() {
@@ -25,25 +25,25 @@ export default function Booking() {
 
   return (
     <main className="w-full flex flex-col items-center space-y-4 mt-10">
-      <div className="text-xl font-medium text-white">Book a Venue</div>
+      <div className="text-xl font-medium text-gray-800">Book a Venue</div>
       <form className="w-fit flex flex-col space-y-4">
 
         <TextField
           variant="standard"
           name="Name-Lastname"
           label="Name-Lastname"
-          sx={whiteFieldSx}
+          sx={darkFieldSx}
         />
 
         <TextField
           variant="standard"
           name="Contact-Number"
           label="Contact-Number"
-          sx={whiteFieldSx}
+          sx={darkFieldSx}
         />
 
         <FormControl variant="standard">
-          <InputLabel id="venue-label" sx={{ color: "white", "&.Mui-focused": { color: "white" } }}>
+          <InputLabel id="venue-label" sx={{ color: "#555555", "&.Mui-focused": { color: "#0284c7" } }}>
             Venue
           </InputLabel>
           <Select
@@ -51,7 +51,7 @@ export default function Booking() {
             labelId="venue-label"
             value={venue}
             onChange={(e) => setVenue(e.target.value)}
-            sx={whiteSelectSx}
+            sx={darkSelectSx}
           >
             <MenuItem value="Bloom">The Bloom Pavilion</MenuItem>
             <MenuItem value="Spark">Spark Space</MenuItem>
